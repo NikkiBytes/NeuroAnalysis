@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH --job-name=timeseriespull
+#SBATCH -o /projects/niblab/experiments/bbx/code/error_files/timepull_out_%A.txt
+#SBATCH -e /projects/niblab/experiments/bbx/code/error_files/timepull_err_%A.txt
+
+
+
+/projects/niblab/modules/software/miniconda3/miniconda3/bin/python3 /projects/niblab/experiments/bbx/code/timeseries_pull.py
