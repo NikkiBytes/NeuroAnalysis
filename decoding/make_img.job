@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH --job-name=niftiIMG
+#SBATCH -t 24:00:00
+#SBATCH --mem-per-cpu 855000
+#SBATCH -o /projects/niblab/bids_projects/Experiments/ChocoData/derivatives/exc_img_build_o.txt
+#SBATCH -e /projects/niblab/bids_projects/Experiments/ChocoData/derivatives/exc_img_build_e.txt
+
+~/anaconda3/bin/python /projects/niblab/bids_projects/Experiments/ChocoData/derivatives/make_img.py
