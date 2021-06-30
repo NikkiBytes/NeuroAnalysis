@@ -13,10 +13,10 @@ wave1 = sorted(glob.glob(os.path.join("/projects/niblab/bids_projects/Experiment
 
 subj4 = [i.split("/")[-7] for i in wave4]
 subj3 = [i.split("/")[-7] for i in wave3]
-subj2 = [i.split("/")[-7] for i in wave2] 
+subj2 = [i.split("/")[-7] for i in wave2]
 subj1 = [i.split("/")[-7] for i in wave1]
 
-# remove duplicates 
+# remove duplicates
 subj4 = list(set(subj4))
 subj3 = list(set(subj3))
 subj2 = list(set(subj2))
@@ -54,10 +54,10 @@ ni2_concat.to_filename(outfile)
 # Step one -get subjects
 
 subj_dict = {}
-for x in sub_list: 
-    subj_dict[x] = [] 
-    
-# -add corresponding milkshake label    
+for x in sub_list:
+    subj_dict[x] = []
+
+# -add corresponding milkshake label
 ct=0
 for d in subj_dict:
     task_dirs = glob.glob(os.path.join('/projects/niblab/bids_projects/Experiments/ChocoData/derivatives', d, "ses-*/func/Analysis/feat1/*"))
@@ -68,7 +68,7 @@ for d in subj_dict:
         id_ = sess+"_"+mlk
         subj_dict[d].append(id_)
         ct=ct+1
-        
+
 temp_out = "/projects/niblab/bids_projects/Experiments/ChocoData/behavorial_data/temp"
 for sub in subj_dict:
     file = open(temp_out+"/tempfile_%s.txt"%sub, 'a')
@@ -80,34 +80,32 @@ for sub in subj_dict:
         fileX_contents.close()
         file.write(data)
     file.close()
-    
+
 tempfiles=sorted(glob.glob("/projects/niblab/bids_projects/Experiments/ChocoData/behavorial_data/temp/tempfile_*.txt"))
 
-# fill in 20% of test files 
+# fill in 20% of test files
 test_slice_count = round(len(tempfiles) *.2)
 test_slice = sub_list[:test_slice_count]
 for sub in test_slice:
     df=pd.read_csv("/projects/niblab/bids_projects/Experiments/ChocoData/behavorial_data/temp/tempfile_%s.txt"%sub, sep=' ',header=None)
     df[1].replace(0,1, inplace=True)
     print(df.head())
-    df.to_csv("/projects/niblab/bids_projects/Experiments/ChocoData/behavorial_data/temp/tempfile_%s.txt"%sub, sep=' ', index=False, header=None)    
+    df.to_csv("/projects/niblab/bids_projects/Experiments/ChocoData/behavorial_data/temp/tempfile_%s.txt"%sub, sep=' ', index=False, header=None)
 
-# Make initial text file    
+# Make initial text file
 fileout = open("/projects/niblab/bids_projects/Experiments/ChocoData/behavorial_data/exc_full_set.txt", "a")
 fileout.write("Label sess\n")
-       
-for f in tempfiles:
+
+for f i n tempfiles:
     print("adding file %s"%f)
     f_contents = open(f, "r")
     data=f_contents.read()
     f_contents.close()
     fileout.write(data)
-    
+
 fileout.close()
-# Make final CSV 
+# Make final CSV
 # MAKE CSV FILE WITH PANDAS
 import pandas as pd
 df=pd.read_csv("/projects/niblab/bids_projects/Experiments/ChocoData/behavorial_data/exc_full_set.txt", sep=' ')
 df.to_csv("/projects/niblab/bids_projects/Experiments/ChocoData/behavorial_data/exc_full_set.csv", sep='\t', index=False)
-
-
