@@ -65,8 +65,6 @@ from sklearn.feature_selection import SelectKBest, f_classif
 svc = SVC(kernel='linear', max_iter=1500)
 feature_selection = SelectKBest(f_classif, k=500)
 
-
-
 # We have our classifier (SVC), our feature selection (SelectKBest), and now,
 # we can plug them together in a *pipeline* that performs the two operations
 # successively:
