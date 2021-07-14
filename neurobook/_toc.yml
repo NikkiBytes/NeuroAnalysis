@@ -3,3 +3,5 @@
 
 format: jb-book
 root: introduction
+chapters:
+- file: PCA
