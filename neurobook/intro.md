@@ -1,16 +1,7 @@
-# Welcome to your Jupyter Book
+# NeuroAnalysis
 
-This is a small sample book to give you a feel for how book content is
-structured.
+Coding with brain data!
 
 :::{note}
-Here is a note!
+what does this look like?
 :::
-
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.

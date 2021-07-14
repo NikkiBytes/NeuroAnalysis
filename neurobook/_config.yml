@@ -1,14 +1,16 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
+title: NeuroAnalysis
+author: Nichollette Taylor Acosta
 logo: logo.png
+description: >-
+  Book for neuroinformatics coding
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: cache #force
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -28,5 +30,15 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true
+  favicon: images/logo/favicon.ico
+  home_page_in_navbar: false
+  use_edit_page_button: true
   use_repository_button: true
+  use_issues_button: true
+  #baseurl: https://threathunterplaybook.com/
+
+launch_buttons:
+  notebook_interface: "classic"
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+  thebe: true
