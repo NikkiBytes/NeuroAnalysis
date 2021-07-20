@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBX Summary Report &#8212; NeuroAnalysis</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="BBx Data Report" href="BBX%20Data%20Report.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroAnalysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PCA.html">
+   Cocaine Connectivity Data PCA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="decoding_brainwaves.html">
+   Decoding Cocaine Brainwave Connectivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cpm_bevel.html">
+   Connectome-based Predictive Modeling (CPM)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BBX%20Data%20Report.html">
+   BBx Data Report
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   BBX Summary Report
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/bbx_summary_report.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbbx_summary_report.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/executablebooks/jupyter-book/edit/master/docs/bbx_summary_report.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/bbx_summary_report.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/bbx_summary_report.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Packages --</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../scripts/preprocessing_module&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">BBXReport</span>
+
+<span class="c1"># -- Display Settings -- </span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="o">%</span><span class="k">pylab</span> inline
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Populating the interactive namespace from numpy and matplotlib
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bbx-summary-report">
+<h1>BBX Summary Report<a class="headerlink" href="#bbx-summary-report" title="Permalink to this headline">¶</a></h1>
+<p><img alt="" src="../../data/pngs/sub-001_ses-1_anat.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BBXObj</span> <span class="o">=</span> <span class="n">BBXReport</span><span class="o">.</span><span class="n">BBXReport</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BBXObj</span><span class="o">.</span><span class="n">bbx_dcm_report</span><span class="p">()</span> <span class="c1"># dicom report</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>**** BBX DICOM fMRI Scan Data ****
+
+
+[INFO] 152 session 1 dicoms. (uploaded to renci)
+
+[INFO] 140 session 2 dicoms. (uploaded to renci)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BBXObj</span><span class="o">.</span><span class="n">bids_report</span><span class="p">()</span> <span class="c1"># bids report</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>**** BBX BIDS fMRI Scan Data ****
+
+
+[INFO] (SESSION-1) 151 BIDS subject folders found.
+
+
+[INFO] (SESSION-1) 145 subjects with 4 task-training run files.
+
+
+[INFO] (SESSION-1) 5 subjects with 3 task-training run files.
+
+
+[INFO] (SESSION-1) 1 subjects with 2 task-training run files.
+
+
+[INFO] (SESSION-2) 139 BIDS subject folders found.
+
+
+[INFO] (SESSION-2) 135 subjects have 4 task-training run files.
+
+[INFO] (SESSION-2) 1 subjects have 3 task-training run files.
+
+[INFO] (SESSION-2) 3 subjects have 2 task-training run files.
+----
+
+(SESSION-1) SUBJECTS WITH 4 RUNS [&#39;sub-001&#39; &#39;sub-002&#39; &#39;sub-003&#39; &#39;sub-004&#39; &#39;sub-005&#39; &#39;sub-006&#39; &#39;sub-007&#39;
+ &#39;sub-008&#39; &#39;sub-009&#39; &#39;sub-010&#39; &#39;sub-011&#39; &#39;sub-012&#39; &#39;sub-013&#39; &#39;sub-014&#39;
+ &#39;sub-015&#39; &#39;sub-016&#39; &#39;sub-017&#39; &#39;sub-018&#39; &#39;sub-019&#39; &#39;sub-020&#39; &#39;sub-021&#39;
+ &#39;sub-022&#39; &#39;sub-023&#39; &#39;sub-024&#39; &#39;sub-025&#39; &#39;sub-026&#39; &#39;sub-027&#39; &#39;sub-028&#39;
+ &#39;sub-030&#39; &#39;sub-031&#39; &#39;sub-032&#39; &#39;sub-033&#39; &#39;sub-034&#39; &#39;sub-035&#39; &#39;sub-036&#39;
+ &#39;sub-037&#39; &#39;sub-038&#39; &#39;sub-039&#39; &#39;sub-040&#39; &#39;sub-041&#39; &#39;sub-042&#39; &#39;sub-043&#39;
+ &#39;sub-044&#39; &#39;sub-045&#39; &#39;sub-046&#39; &#39;sub-050&#39; &#39;sub-051&#39; &#39;sub-052&#39; &#39;sub-053&#39;
+ &#39;sub-054&#39; &#39;sub-055&#39; &#39;sub-056&#39; &#39;sub-057&#39; &#39;sub-058&#39; &#39;sub-059&#39; &#39;sub-061&#39;
+ &#39;sub-062&#39; &#39;sub-063&#39; &#39;sub-064&#39; &#39;sub-065&#39; &#39;sub-066&#39; &#39;sub-067&#39; &#39;sub-068&#39;
+ &#39;sub-070&#39; &#39;sub-071&#39; &#39;sub-072&#39; &#39;sub-074&#39; &#39;sub-075&#39; &#39;sub-077&#39; &#39;sub-078&#39;
+ &#39;sub-079&#39; &#39;sub-080&#39; &#39;sub-082&#39; &#39;sub-083&#39; &#39;sub-084&#39; &#39;sub-085&#39; &#39;sub-086&#39;
+ &#39;sub-087&#39; &#39;sub-088&#39; &#39;sub-089&#39; &#39;sub-090&#39; &#39;sub-091&#39; &#39;sub-092&#39; &#39;sub-093&#39;
+ &#39;sub-095&#39; &#39;sub-096&#39; &#39;sub-097&#39; &#39;sub-098&#39; &#39;sub-099&#39; &#39;sub-100&#39; &#39;sub-102&#39;
+ &#39;sub-103&#39; &#39;sub-104&#39; &#39;sub-107&#39; &#39;sub-108&#39; &#39;sub-109&#39; &#39;sub-111&#39; &#39;sub-112&#39;
+ &#39;sub-114&#39; &#39;sub-115&#39; &#39;sub-116&#39; &#39;sub-117&#39; &#39;sub-118&#39; &#39;sub-119&#39; &#39;sub-120&#39;
+ &#39;sub-121&#39; &#39;sub-123&#39; &#39;sub-124&#39; &#39;sub-127&#39; &#39;sub-128&#39; &#39;sub-129&#39; &#39;sub-130&#39;
+ &#39;sub-131&#39; &#39;sub-132&#39; &#39;sub-133&#39; &#39;sub-134&#39; &#39;sub-135&#39; &#39;sub-136&#39; &#39;sub-137&#39;
+ &#39;sub-138&#39; &#39;sub-140&#39; &#39;sub-141&#39; &#39;sub-142&#39; &#39;sub-143&#39; &#39;sub-144&#39; &#39;sub-145&#39;
+ &#39;sub-148&#39; &#39;sub-149&#39; &#39;sub-150&#39; &#39;sub-151&#39; &#39;sub-152&#39; &#39;sub-153&#39; &#39;sub-154&#39;
+ &#39;sub-156&#39; &#39;sub-157&#39; &#39;sub-159&#39; &#39;sub-160&#39; &#39;sub-162&#39; &#39;sub-163&#39; &#39;sub-164&#39;
+ &#39;sub-166&#39; &#39;sub-167&#39; &#39;sub-168&#39; &#39;sub-169&#39; &#39;sub-170&#39;]: 
+
+
+(SESSION-2) SUBJECTS WITH 4 RUNS [&#39;sub-001&#39; &#39;sub-002&#39; &#39;sub-004&#39; &#39;sub-005&#39; &#39;sub-006&#39; &#39;sub-007&#39; &#39;sub-008&#39;
+ &#39;sub-009&#39; &#39;sub-010&#39; &#39;sub-014&#39; &#39;sub-015&#39; &#39;sub-017&#39; &#39;sub-019&#39; &#39;sub-020&#39;
+ &#39;sub-021&#39; &#39;sub-022&#39; &#39;sub-023&#39; &#39;sub-024&#39; &#39;sub-025&#39; &#39;sub-027&#39; &#39;sub-028&#39;
+ &#39;sub-030&#39; &#39;sub-031&#39; &#39;sub-032&#39; &#39;sub-033&#39; &#39;sub-034&#39; &#39;sub-035&#39; &#39;sub-036&#39;
+ &#39;sub-037&#39; &#39;sub-038&#39; &#39;sub-039&#39; &#39;sub-040&#39; &#39;sub-041&#39; &#39;sub-042&#39; &#39;sub-043&#39;
+ &#39;sub-044&#39; &#39;sub-045&#39; &#39;sub-046&#39; &#39;sub-048&#39; &#39;sub-050&#39; &#39;sub-051&#39; &#39;sub-052&#39;
+ &#39;sub-053&#39; &#39;sub-054&#39; &#39;sub-055&#39; &#39;sub-057&#39; &#39;sub-059&#39; &#39;sub-061&#39; &#39;sub-062&#39;
+ &#39;sub-063&#39; &#39;sub-065&#39; &#39;sub-066&#39; &#39;sub-067&#39; &#39;sub-068&#39; &#39;sub-070&#39; &#39;sub-071&#39;
+ &#39;sub-072&#39; &#39;sub-073&#39; &#39;sub-074&#39; &#39;sub-075&#39; &#39;sub-077&#39; &#39;sub-078&#39; &#39;sub-079&#39;
+ &#39;sub-080&#39; &#39;sub-082&#39; &#39;sub-083&#39; &#39;sub-084&#39; &#39;sub-085&#39; &#39;sub-086&#39; &#39;sub-087&#39;
+ &#39;sub-088&#39; &#39;sub-089&#39; &#39;sub-090&#39; &#39;sub-092&#39; &#39;sub-093&#39; &#39;sub-094&#39; &#39;sub-095&#39;
+ &#39;sub-096&#39; &#39;sub-097&#39; &#39;sub-098&#39; &#39;sub-099&#39; &#39;sub-100&#39; &#39;sub-102&#39; &#39;sub-103&#39;
+ &#39;sub-104&#39; &#39;sub-107&#39; &#39;sub-108&#39; &#39;sub-109&#39; &#39;sub-111&#39; &#39;sub-112&#39; &#39;sub-114&#39;
+ &#39;sub-115&#39; &#39;sub-116&#39; &#39;sub-117&#39; &#39;sub-118&#39; &#39;sub-119&#39; &#39;sub-120&#39; &#39;sub-121&#39;
+ &#39;sub-123&#39; &#39;sub-124&#39; &#39;sub-127&#39; &#39;sub-128&#39; &#39;sub-129&#39; &#39;sub-130&#39; &#39;sub-131&#39;
+ &#39;sub-132&#39; &#39;sub-133&#39; &#39;sub-134&#39; &#39;sub-136&#39; &#39;sub-137&#39; &#39;sub-140&#39; &#39;sub-141&#39;
+ &#39;sub-142&#39; &#39;sub-143&#39; &#39;sub-144&#39; &#39;sub-145&#39; &#39;sub-146&#39; &#39;sub-148&#39; &#39;sub-149&#39;
+ &#39;sub-151&#39; &#39;sub-152&#39; &#39;sub-153&#39; &#39;sub-154&#39; &#39;sub-156&#39; &#39;sub-157&#39; &#39;sub-159&#39;
+ &#39;sub-160&#39; &#39;sub-161&#39; &#39;sub-162&#39; &#39;sub-163&#39; &#39;sub-164&#39; &#39;sub-166&#39; &#39;sub-168&#39;
+ &#39;sub-169&#39; &#39;sub-170&#39;]:
+
+
+(SESSION-1) SUBJECTS WITH 3 RUNS [&#39;sub-048&#39; &#39;sub-073&#39; &#39;sub-076&#39; &#39;sub-146&#39; &#39;sub-147&#39;]: 
+
+
+(SESSION-2) SUBJECTS WITH 3 RUNS [&#39;sub-058&#39;]:
+
+
+(SESSION-1) SUBJECTS WITH 2 RUNS [&#39;sub-060&#39;]: 
+
+
+(SESSION-2) SUBJECTS WITH 2 RUNS [&#39;sub-011&#39; &#39;sub-013&#39; &#39;sub-016&#39;]:
+
+---- 
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "executablebooks/jupyter-book",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="BBX%20Data%20Report.html" title="previous page">BBx Data Report</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Nichollette Taylor Acosta<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

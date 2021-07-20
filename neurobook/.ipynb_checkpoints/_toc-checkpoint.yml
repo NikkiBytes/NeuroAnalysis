@@ -1,0 +1,6 @@
+format: jb-article
+root: introduction
+sections:
+- file: PCA
+- file: decoding_brainwaves
+- file: cpm_bevel
